@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h1>Part 1</h1>
+
+<div id="root"> <!-- component will go in this div --> </div>
+
+<script src="https://unpkg.com/react/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+
+<script src="https://unpkg.com/babel-standalone"></script>
+
+<script type="text/jsx">
+  function FirstComponent() {
+    return <h1>My very first component</h1>;
+  }
+
+  function NamedComponent({ name }) {
+    return <p>My name is {name}</p>;
+  }
+
+  function App() {
+    return (
+      <div>
+        <FirstComponent />
+        <NamedComponent name="Tony" />
+      </div>
+    );
+  }
+
+  // This will render your App component inside the div with id 'root'
+  ReactDOM.render(<App />, document.getElementById('root'));
+</script>
+
+</body>
+</html>
+
